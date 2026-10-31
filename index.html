@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Madrid | The Royal Club</title>
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #15233b;
+}
+
+/* NAVBAR */
+
+header {
+    background: #071b36;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #d8b65c;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #d8b65c;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    background:
+    linear-gradient(90deg,
+    rgba(4,15,35,.95),
+    rgba(4,15,35,.35)),
+    url("images/bernabeu.jpg") center/cover;
+
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    color: #d8b65c;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.hero-content button {
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: none;
+    background: #d8b65c;
+    color: #071b36;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero-content button:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* INTRO */
+
+.intro {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* TITLES */
+
+.titles {
+    background: #071b36;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section-title {
+    color: #d8b65c;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #ccc;
+    margin-bottom: 45px;
+}
+
+.titles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+}
+
+.title-card {
+    background: #102a4b;
+    padding: 35px 15px;
+    border: 1px solid #b99a48;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.title-card:hover {
+    transform: translateY(-8px);
+    background: #193b62;
+}
+
+.title-card .icon {
+    font-size: 45px;
+}
+
+.title-card h3 {
+    font-size: 38px;
+    color: #d8b65c;
+    margin: 15px 0;
+}
+
+.title-card p {
+    color: white;
+    font-size: 15px;
+}
+
+/* LEGENDS */
+
+.legends {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.legends h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.legends-desc {
+    color: #777;
+    margin-bottom: 45px;
+}
+
+.legend-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.legend-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    transition: .3s;
+    text-align: left;
+}
+
+.legend-card:hover {
+    transform: translateY(-10px);
+}
+
+.legend-card img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+.legend-info {
+    padding: 22px;
+}
+
+.legend-info h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #071b36;
+}
+
+.legend-info p {
+    color: #777;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.legend-info span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #b18c35;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* HISTORY */
+
+.history {
+    background: #e9e9e9;
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.history h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.history p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+/* FOOTER */
+
+footer {
+    background: #041020;
+    padding: 35px;
+    text-align: center;
+    color: white;
+}
+
+footer h2 {
+    color: #d8b65c;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 7px;
+        font-size: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="logo">REAL MADRID</div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#titles">TITLES</a>
+        <a href="#legends">LEGENDS</a>
+        <a href="#history">HISTORY</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <h1>HALA MADRID!</h1>
+
+        <p>
+            More than a football club.
+            A history of greatness, legendary players
+            and unforgettable victories.
+            Welcome to the Royal Club.
+        </p>
+
+        <button onclick="location.href='#titles'">
+            DISCOVER OUR HISTORY
+        </button>
+    </div>
+
+</section>
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>THE ROYAL CLUB</h2>
+
+    <p>
+        Founded in 1902, Real Madrid is one of the
+        most successful football clubs in history.
+        From legendary European nights to unforgettable
+        players, the white shirt represents excellence,
+        passion and ambition.
+    </p>
+
+</section>
+
+<!-- TITLES -->
+
+<section class="titles" id="titles">
+
+    <h2 class="section-title">OUR TROPHY ROOM</h2>
+
+    <p class="section-desc">
+        A legacy built through victories and history.
+    </p>
+
+    <div class="titles-container">
+
+        <div class="title-card">
+            <div class="icon">🏆</div>
+            <h3>15</h3>
+            <p>UEFA Champions League</p>
+        </div>
+
+        <div class="title-card">
+            <div class="icon">🥇</div>
+            <h3>36</h3>
+            <p>La Liga Titles</p>
+        </div>
+
+        <div class="title-card">
+            <div class="icon">🏆</div>
+            <h3>20</h3>
+            <p>Copa del Rey</p>
+        </div>
+
+        <div class="title-card">
+            <div class="icon">🥇</div>
+            <h3>13</h3>
+            <p>Spanish Super Cups</p>
+        </div>
+
+        <div class="title-card">
+            <div class="icon">🌍</div>
+            <h3>9</h3>
+            <p>FIFA and Intercontinental World Titles</p>
+        </div>
+
+        <div class="title-card">
+            <div class="icon">⭐</div>
+            <h3>6</h3>
+            <p>UEFA Super Cups</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LEGENDS -->
+
+<section class="legends" id="legends">
+
+    <h2>REAL MADRID LEGENDS</h2>
+
+    <p class="legends-desc">
+        The greatest names who made history in white.
+    </p>
+
+    <div class="legend-container">
+
+        <div class="legend-card">
+            <img src="image1.png"
+            alt="Cristiano Ronaldo">
+
+            <div class="legend-info">
+                <h3>Cristiano Ronaldo</h3>
+                <p>
+                    One of the greatest players in football
+                    history. A legendary goalscorer who
+                    made unforgettable memories in Madrid.
+                </p>
+                <span>THE GOAL MACHINE</span>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <img src="image2.png"
+            alt="Zinedine Zidane">
+
+            <div class="legend-info">
+                <h3>Zinedine Zidane</h3>
+                <p>
+                    A football genius famous for his elegance,
+                    technique and unforgettable European
+                    Cup final goal in 2002.
+                </p>
+                <span>THE MAGICIAN</span>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <img src="image3.png"
+            alt="Raul">
+
+            <div class="legend-info">
+                <h3>Raúl González</h3>
+                <p>
+                    A legendary captain and symbol of
+                    loyalty, leadership and the famous
+                    white shirt.
+                </p>
+                <span>THE CAPTAIN</span>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <img src="image4.png"
+            alt="Di Stefano">
+
+            <div class="legend-info">
+                <h3>Alfredo Di Stéfano</h3>
+                <p>
+                    One of the most influential players
+                    in the club's history and a central
+                    figure in its first European dynasty.
+                </p>
+                <span>THE LEGEND</span>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <img src="image5.png"
+            alt="Sergio Ramos">
+
+            <div class="legend-info">
+                <h3>Sergio Ramos</h3>
+                <p>
+                    A powerful defender and historic captain.
+                    His late equaliser in the 2014 final
+                    became an unforgettable moment.
+                </p>
+                <span>THE WARRIOR</span>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <img src="image6.png"
+            alt="Marcelo">
+
+            <div class="legend-info">
+                <h3>Marcelo</h3>
+                <p>
+                    A creative left-back known for his
+                    incredible technique, attacking style
+                    and contribution to Madrid's success.
+                </p>
+                <span>THE BRAZILIAN MAGIC</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HISTORY -->
+
+<section class="history" id="history">
+
+    <h2>OUR HISTORY</h2>
+
+    <p>
+        Since 1902, Real Madrid has created a unique
+        football legacy. The club won five consecutive
+        European Cups between 1956 and 1960 and
+        continued making history across generations.
+
+        From Di Stefano to Cristiano Ronaldo and
+        the modern generation, the story continues.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>HALA MADRID 🤍</h2>
+
+    <p>REAL MADRID CF - THE ROYAL CLUB</p>
+
+    <p>Unofficial Fan Website | 2026</p>
+
+</footer>
+
+</body>
+</html>
